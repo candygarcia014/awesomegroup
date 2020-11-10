@@ -1,0 +1,36 @@
+body {
+    background-image: url("./images/paws.jpg");
+    position: relative;
+}
+
+.jumbotron {
+    background-color: rgb(45, 138, 243);
+    /* height: 75px; */
+    text-align: center;
+}
+
+/* #header-text,
+.header {
+    margin: 0;
+} */
+
+.card {
+    width: 500px;
+    height: 600px;
+    float: left;
+    margin-left: 100px;
+    margin-bottom: 50px;;
+}
+
+.btn-outline-success {
+    color: rgb(45, 138, 243);
+    border-color: rgb(45, 138, 243);
+}
+
+/* #donate {
+    background-color: rgb(45, 138, 243);
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: auto;
+} */
