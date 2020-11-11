@@ -40,13 +40,14 @@ body {
 }
 
 a {
-    background-color: white;
+    color: white;
 }
 
 .d-hidden {
     text-align: center;
     font-style: normal;
     display: block;
+    margin-bottom: 25px;
 }
 
 
