@@ -21,8 +21,7 @@ body {
     height: 600px;
     float: left;
     margin-left: 100px;
-    margin-bottom: 50px;
-    ;
+    margin-bottom: 100px;
 }
 
 .btn-outline-success {
@@ -34,13 +33,24 @@ body {
     background-color: rgb(45, 138, 243);
     position: fixed;
     bottom: 0;
-    height: 50px;
+    height: 25px;
     width: 100%;
     text-align: center;
+    vertical-align: middle;
+}
+
+.lead {
+    margin-top: 14px;
 }
 
 a {
     color: white;
+}
+
+.map-or-dog {
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .d-hidden {
