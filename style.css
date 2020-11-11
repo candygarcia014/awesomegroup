@@ -5,7 +5,7 @@ body {
 
 .jumbotron {
     background-color: rgb(45, 138, 243);
-    background-image: "./images/paws.jpg";
+    /* background-image: "./images/paws.jpg";
     /* height: 75px; */
     text-align: center;
 }
