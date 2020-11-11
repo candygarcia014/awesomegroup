@@ -34,13 +34,19 @@ body {
     background-color: rgb(45, 138, 243);
     position: fixed;
     bottom: 0;
-    height: 50px;
+    height: 25px;
     width: 100%;
     text-align: center;
 }
 
 a {
     color: white;
+}
+
+.map-or-dog {
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .d-hidden {
