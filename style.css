@@ -21,8 +21,7 @@ body {
     height: 600px;
     float: left;
     margin-left: 100px;
-    margin-bottom: 50px;
-    ;
+    margin-bottom: 100px;
 }
 
 .btn-outline-success {
@@ -37,6 +36,11 @@ body {
     height: 25px;
     width: 100%;
     text-align: center;
+    vertical-align: middle;
+}
+
+.lead {
+    margin-top: 14px;
 }
 
 a {
