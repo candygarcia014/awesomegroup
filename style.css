@@ -5,7 +5,7 @@ body {
 
 .jumbotron {
     background-color: rgb(45, 138, 243);
-    background-image: "./images/paws.jpg";
+    /* background-image: "./images/paws.jpg";
     /* height: 75px; */
     text-align: center;
 }
@@ -22,14 +22,18 @@ body {
     width: 500px;
     height: 600px;
     float: left;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 100px;
+    margin: 50px;
 }
 
 .btn-outline-success {
     color: rgb(45, 138, 243);
     border-color: rgb(45, 138, 243);
+}
+
+.custom-select,
+.input-group-append {
+    margin-top: 20px;
+
 }
 
 #donate {
