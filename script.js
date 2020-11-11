@@ -8,7 +8,7 @@ function checkToken(){
 };
 //retrieves token from api
 function getToken(){
-  var queryURL = "https://cors-anywhere.herokuapp.com/https://api.petfinder.com/v2/oauth2/token";
+  var queryURL = "https://api.petfinder.com/v2/oauth2/token";
   $.ajax({
   header: origin,
   url: queryURL,
@@ -30,8 +30,9 @@ function getToken(){
 // function to run when searching
 function search(){
   var token = JSON.parse(localStorage.getItem("token"))
-  var queryURL = "https://cors-anywhere.herokuapp.com/https://api.petfinder.com/v2/" + type;
+  var queryURL = "https://api.petfinder.com/v2/" + type;
   $.ajax({
+    header:origin,
     url: queryURL,
     method: "GET",
     headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
@@ -46,5 +47,6 @@ checkToken();
 //runs when search button is pressed 
 $(".my-sm-0").on("click", function(event){
     event.preventDefault();
+    checkToken()
     search();
 });
