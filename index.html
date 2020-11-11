@@ -69,6 +69,11 @@
         </div>
         <div class="card-body">
 
+            <form class="form-inline">
+                <input id="cityInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
             <div class="input-group">
                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                     <option selected>Dog or Cat?</option>
@@ -76,7 +81,7 @@
                     <option name="dog">dog</option>
                 </select>
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Enter</button>
+                  <button id="enterBtn" class="btn btn-outline-secondary" type="button">Enter</button>
                 </div>
             </div>
 
@@ -103,10 +108,6 @@
                 </div>
               </div>
 
-            <form class="form-inline">
-                <input id="cityInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
         <div class="map-or-dog">
             <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
