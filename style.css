@@ -39,5 +39,15 @@ body {
     text-align: center;
 }
 
+a {
+    background-color: white;
+}
+
+.d-hidden {
+    text-align: center;
+    font-style: normal;
+    display: block;
+}
+
 
 /*change the color for the link in the footer*/
