@@ -50,7 +50,7 @@ function breedSearch(){
                 }).then(function(response){
                     console.log(response)
                     var img = $("<img height='300px' src ="+response[0].url+">")
-                    $(".breedInfo").prepend(img)
+                    $(".append-dog-photo").append(img)
                 });
                 return;
             };
@@ -61,8 +61,9 @@ function breedSearch(){
 
 function clearSearch(){
     $(".breedInfo").html("")
+    $(".append-dog-photo").html("")
 };
-$(".breedBtn").on("click", function(){
+$("#searchBtn2").on("click", function(){
     event.preventDefault(); 
 
     clearSearch();
