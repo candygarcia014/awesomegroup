@@ -1,4 +1,4 @@
-var type = "animals"
+
 //checks if token is nonexistant or if it is expired, if so it generates a new one
 function checkToken(){
   var token = JSON.parse(localStorage.getItem("token"));
@@ -23,14 +23,23 @@ function getToken(){
       value: response.access_token,
       expiry: now
     }
-    localStorage.setItem("token", JSON.stringify(token))
+    localStorage.setItem("token", JSON.stringify(token));
   })
 };
 
 // function to run when searching
 function search(){
-  var token = JSON.parse(localStorage.getItem("token"))
-  var queryURL = "https://api.petfinder.com/v2/" + type;
+  var linkAdd = "";
+  var userLocation = "";
+  if($("#cityInput1").val() != ""){
+    //general syntax for adding new parameters for search. will be triggered by select inputs
+    linkAdd = "location="+ $("#cityInput1").val();
+    userlocation = $("cityInput1").val();
+  }
+  
+  var token = JSON.parse(localStorage.getItem("token"));
+  var queryURL = "https://api.petfinder.com/v2/animals?distance=10&" + linkAdd;
+  console.log(queryURL);
   $.ajax({
     header:origin,
     url: queryURL,
@@ -38,6 +47,7 @@ function search(){
     headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
   }).then(function(response){
     console.log(response);
+    $(".location").text(linkAdd)
   });
 };
 
@@ -47,6 +57,6 @@ checkToken();
 //runs when search button is pressed 
 $(".my-sm-0").on("click", function(event){
     event.preventDefault();
-    checkToken()
+    checkToken();
     search();
 });
