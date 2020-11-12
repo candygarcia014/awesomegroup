@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+    </div>
+    <!--Jumbotron-->
     <div class="title jumbotron jumbotron-fluid">
         <div id="header-text" class="container">
             <h1 class="header display-4">Search And Rescue</h1>
@@ -18,8 +21,11 @@
         </div>
     </div>
 
-    <div class="container">
 
+
+    <!--Carousel-->
+    <div class="container">
+        <!--Carousel indicators-->
         <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,6 +35,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
             </ol>
+            <!--Carousel images (6)-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="./images/slide1.jfif" alt="First slide">
@@ -52,6 +59,7 @@
         </div>
 
     </div>
+    <!--Carousel control icons/previous and next buttons-->
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -62,17 +70,20 @@
     </a>
     </div>
     </div>
-
-    <div class="card">
+    <!--card to insert the p 'Why should you rescue vs buy-->
+    <div class="card1">
         <div class="card-header">
-            Find a Shelter
+            Why Adopt a Dog or Cat Over Buying?
         </div>
         <div class="card-body">
 
-            <form class="form-inline">
-                <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <p>Did you know that over 1,000 people per hour run a search right here looking to adopt a pet? Pet adoption is quickly becoming the preferred way to find a new dog, puppy, cat or kitten. Best of all, there are so many benefits when you adopt
+                a dog or adopt a cat over buying. For instance, pet adoption will almost always be more affordable than buying a puppy for sale from a breeder or finding a kitten for sale from a litter. There are more benefits as well. Since pets in rescues
+                and shelters usually come from a home where the owners ran out of money, got divorced, or had to move, it's common to find that the dogs and cats on our website are already housetrained, good with kids, or do well with other pets. People
+                are finding out that buying a puppy for sale from a breeder isn't all it's cracked up to be, and the dogs and cats don't leave the organization without having their shots and being taken to the vet. That means less stress, and more savings!
+                So what are you waiting for? Go find that perfect pet!
+            </p>
+
 
             <div class="input-group">
                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
@@ -109,6 +120,7 @@
               </div>
 
         </div>
+
         <div class="map-or-dog">
             <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
             <img class="photo">
@@ -150,12 +162,42 @@
             <div class="description">looks</div>
             <div class="location">on</div>
             <div class="contact">page</div>
-        </div>
-    </div>
 
-    <footer class="footer" id="donate">
-        <h6 class="lead">Donate to your local animal shelter or <a href="https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlebrand-T4&initialms=MP_PMK_Googlebrand-T4&pcode=WPSE9XXGOGN2PK00014&lpcode=WPSE9XXGOGN1PK00014&test&ds_rl=1066461&gclid=CjwKCAiAkan9BRAqEiwAP9X6UUMMa9MyQGgJc4ipye4MGz7G9kYxoH1ZINIOBxeRWXKlZP1hspV14BoC1VwQAvD_BwE&gclsrc=aw.ds">here</a>            to the ASPCA!</h6>
-    </footer>
+        </div>
+        <!--Card 2 Learn about a breed-->
+        <div class="card">
+            <div class="card-header">
+                Learn About a Breed
+            </div>
+            <div class="card-body">
+                <form class="form-inline">
+                    <input id="cityInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="map-or-dog">
+                <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                <img class="photo">
+            </div>
+
+            <!-- Div to put the API responses-->
+            <div class="d-hidden">
+                <div class="breed">some</div>
+                <div class="age">text</div>
+                <div class="gender">to</div>
+                <div class="fixed">see</div>
+                <div class="declawed">how</div>
+                <div class="shots">this</div>
+                <div class="description">looks</div>
+                <div class="location">on</div>
+                <div class="contact">page</div>
+            </div>
+        </div>
+        <!--Footer-->
+        <footer class="footer" id="donate">
+            <h6 class="lead">Donate to your local animal shelter or <a href="https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlebrand-T4&initialms=MP_PMK_Googlebrand-T4&pcode=WPSE9XXGOGN2PK00014&lpcode=WPSE9XXGOGN1PK00014&test&ds_rl=1066461&gclid=CjwKCAiAkan9BRAqEiwAP9X6UUMMa9MyQGgJc4ipye4MGz7G9kYxoH1ZINIOBxeRWXKlZP1hspV14BoC1VwQAvD_BwE&gclsrc=aw.ds">here</a>                to the ASPCA!</h6>
+        </footer>
+
 
     <!--JS link files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -163,6 +205,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
