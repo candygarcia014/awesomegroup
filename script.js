@@ -38,7 +38,7 @@ function search(){
   }
   
   var token = JSON.parse(localStorage.getItem("token"));
-  var queryURL = "https://api.petfinder.com/v2/animals?" + linkAdd;
+  var queryURL = "https://api.petfinder.com/v2/animals?distance=10&" + linkAdd;
   console.log(queryURL);
   $.ajax({
     header:origin,
