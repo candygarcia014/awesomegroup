@@ -30,13 +30,15 @@ function getToken(){
 // function to run when searching
 function search(){
   var linkAdd = "";
+  var userLocation = "";
   if($("#cityInput1").val() != ""){
     //general syntax for adding new parameters for search. will be triggered by select inputs
-    linkAdd = "type="+ $("#cityInput1").val()+"&breed=shiba inu&";
+    linkAdd = "location="+ $("#cityInput1").val();
+    userlocation = $("cityInput1").val();
   }
   
   var token = JSON.parse(localStorage.getItem("token"));
-  var queryURL = "https://api.petfinder.com/v2/animals?" + linkAdd;
+  var queryURL = "https://api.petfinder.com/v2/animals?distance=10&" + linkAdd;
   console.log(queryURL);
   $.ajax({
     header:origin,
@@ -45,6 +47,7 @@ function search(){
     headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
   }).then(function(response){
     console.log(response);
+    $(".location").text(linkAdd)
   });
 };
 
