@@ -28,28 +28,95 @@ function getToken(){
 };
 
 // function to run when searching
-function search(){
-  var linkAdd = "";
-  var userLocation = "";
-  if($("#cityInput1").val() != ""){
-    //general syntax for adding new parameters for search. will be triggered by select inputs
-    linkAdd = "location="+ $("#cityInput1").val();
-    userlocation = $("cityInput1").val();
-  }
+
+  function search(){
+    var linkAdd = "";
+    if($("#cityInput1").val() != ""){
+      //general syntax for adding new parameters for search. will be triggered by select inputs
+      linkAdd = "location="+ $("#cityInput1").val();
+      userlocation = $("cityInput1").val();
+    }
+    
+    var token = JSON.parse(localStorage.getItem("token"));
+    var queryURL = "https://api.petfinder.com/v2/animals?limit=10&distance=10&" + linkAdd;
+    
+    $.ajax({
+      header:origin,
+      url: queryURL,
+      method: "GET",
+      headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
+    }).then(function(response){
+      // console.log(response);console.log(queryURL);
+      // $(".location").text(linkAdd)
+    });
+    
   
-  var token = JSON.parse(localStorage.getItem("token"));
-  var queryURL = "https://api.petfinder.com/v2/animals?distance=10&" + linkAdd;
-  console.log(queryURL);
-  $.ajax({
-    header:origin,
-    url: queryURL,
-    method: "GET",
-    headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
-  }).then(function(response){
-    console.log(response);
-    $(".location").text(linkAdd)
-  });
-};
+  
+  
+    var linkAdd2="";
+    if ($("#inputGroupSelect03").val() !="") {
+      linkAdd2 = "type=" + $("#inputGroupSelect03").val() 
+      }
+      var token = JSON.parse(localStorage.getItem("token"));
+    
+      var token = JSON.parse(localStorage.getItem("token"));
+      var queryURL = "https://api.petfinder.com/v2/animals?limit=10&distance=10&" + linkAdd + "&" + linkAdd2;
+      console.log(queryURL);
+      $.ajax({
+        header:origin,
+        url: queryURL,
+        method: "GET",
+        headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
+      }).then(function(response){
+        // console.log(response);
+        // $(".age").text(linkAdd2)
+      });
+    
+  
+    
+      var linkAdd3="";
+      if ($("#inputGroupSelect04").val() !="") {
+        linkAdd3 = "gender=" + $("#inputGroupSelect04").val() 
+        }
+        var token = JSON.parse(localStorage.getItem("token"));
+      
+        var token = JSON.parse(localStorage.getItem("token"));
+        var queryURL = "https://api.petfinder.com/v2/animals?limit=10&distance=10&" + linkAdd + "&"  + linkAdd2 + "&" + linkAdd3;
+        console.log(queryURL);
+        $.ajax({
+          header:origin,
+          url: queryURL,
+          method: "GET",
+          headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
+        }).then(function(response){
+          // console.log(response);
+          // $(".breed").text(linkAdd3)
+        });
+      
+    
+     
+        var linkAdd4="";
+        if ($("#inputGroupSelect05").val() !="") {
+          linkAdd4 = "size=" + $("#inputGroupSelect05").val() 
+          }
+          var token = JSON.parse(localStorage.getItem("token"));
+        
+          var token = JSON.parse(localStorage.getItem("token"));
+          var queryURL = "https://api.petfinder.com/v2/animals?limit=10&distance=10&" + linkAdd  +"&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4;
+          console.log(queryURL);
+          $.ajax({
+            header:origin,
+            url: queryURL,
+            method: "GET",
+            headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
+          }).then(function(response){
+            console.log(response);
+          //  console.log( $(".gender").text(linkAdd4));
+          });
+  
+             };
+            
+            
 
 //runs when page opens or reloads
 checkToken();
