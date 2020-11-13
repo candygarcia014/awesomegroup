@@ -86,14 +86,28 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-------------------------start card1--------------------------->
 
-        <!-- ____________________________________start card1- Shelter Search-_________________________________________________________ -->
-
+    <div class="container">
         <div class="row my-4">
-            <div class="card col-sm-12">
+            <div class="card first-card col-sm-12">
                 <div class="card-header">
                     Find A Pet In A Shelter Near You
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-8 empty"></div>
+
+                    <div class="col-sm-4 search-div">
+                        <form class="form-inline">
+                            <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Enter Zipcode" aria-label="Search">
+                            <button id="searchBtn1" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-4">
@@ -193,26 +207,41 @@
 
                         <div class="col-sm-8"></div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 no-padding">
                             <form class="form-inline">
-                                <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Breed preference?" aria-label="Search">
+                                <input id="breed-input" class="form-control mr-sm-2" type="text" placeholder="Breed preference?" aria-label="Search">
                             </form>
                         </div>
 
                         <div class="col-sm-8"></div>
 
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8 empty"></div>
-
-                        <div class="col-sm-4 search-div">
-                            <form class="form-inline">
-                                <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Enter Zipcode" aria-label="Search">
-                                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-
+                        <div class="col-sm-12">
+                            <hr id="separate-top" class="separate">
                         </div>
+
                     </div>
+                    <!--------------------start results -------------------->
+                    <section class="whole-thing">
+                        <div id="shelter-results" class="containter">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="row>">
+                                        <div class="col-sm-4">
+                                            <div class="append-pet-photo-here pet">
+                                                <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                                                <img class="photo">
+                                            </div>
+                                        </div>
+                                        <div class="dog-info col-sm-8">
+                                            <div class="d-hidden">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
             </div>
@@ -249,12 +278,12 @@
         <!-- ____________________________________start card2_________________________________________________________ -->
 
         <div class="row my-4">
-            <div class="card col-sm-12">
+            <div class="card last-card col-sm-12">
                 <div class="card-header">
                     Learn About a Breed
                 </div>
 
-                <div class="card-body">
+                <div class="card-body last-card-body">
                     <div class="row">
                         <div class="col-sm-8 empty">
                             Not sure what you're looking for? Maybe you just want any happy pup! Or maybe you saw a cutie you don't know much about? Check out some dog breeds you might be interested in here. Just type in a dog breed and hit search to learn more!
@@ -269,28 +298,31 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-        <!--------------------start results2 - Learn about a breed -------------------->
-
-
-        <div class="row my-4" id="dog-results">
-            <div class="col-sm-12">
-                <div class="row>">
-                    <div class="col-sm-4">
-                        <div class="append-dog-photo dog">
-                            <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
-                            <img class="photo">
-                        </div>
-                    </div>
-                    <div class="append-dog-info-div dog-info col-sm-8">
-                        <div class="breedInfo">
-
-                        </div>
-                    </div>
-
+                <div class="col-sm-12">
+                    <hr class="separate">
                 </div>
+                <!--------------------start results2 -------------------->
+                <section class="whole-thing2">
+                    <div id="dog-results" class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row>">
+                                    <div class="col-sm-4">
+                                        <div class="append-dog-photo dog">
+                                            <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                                            <img class="photo">
+                                        </div>
+                                    </div>
+                                    <div class="append-dog-info-div dog-info col-sm-8">
+                                        <div class="breedInfo">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
@@ -302,6 +334,7 @@
             </div>
         </div>
     </footer>
+
     <!--JS link files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
