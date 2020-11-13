@@ -1,5 +1,6 @@
 body {
     background-image: url("./images/paws2.jpg");
+    background-size: cover;
     position: relative;
 }
 
@@ -12,13 +13,10 @@ body {
 
 
 .card1 {
-    width: 80%;
-    float: center;
-    margin-left: 125px;
-    margin-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
     background-color: white;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .search-div {
@@ -33,6 +31,26 @@ body {
     padding: 0;
 }
 
+.first-card {
+    margin-bottom: 25px;
+}
+
+#separate-top {
+    margin-top: 35px;
+}
+
+.separate {
+    visibility: hidden;
+}
+
+.last-card {
+    margin-bottom: 20px;
+}
+
+.last-card-body {
+    padding: 20px;
+}
+
 .card-header {
     width: 100%;
 }
@@ -45,6 +63,14 @@ body {
 .btn-outline-success {
     color:tan;
     border-color: tan;
+}
+
+#breed-input {
+    margin-top: 10px;
+}
+
+.no-padding {
+    padding: 0 25px;
 }
 
 .dog-info {

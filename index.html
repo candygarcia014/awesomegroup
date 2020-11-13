@@ -69,9 +69,9 @@
     
         </div>
     <!--card to insert the p 'Why should you rescue vs buy-->
-    <div class="card1">
-        <div class="row">
-            <div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card1">    
                 <div class="card-header">
                     Why Adopt a Dog or Cat Over Buying?
                 </div>
@@ -87,10 +87,11 @@
             </div>
         </div>
     </div>
-<!-- ____________________________________start card1_________________________________________________________ -->
+<!-------------------------start card1--------------------------->
+
     <div class="container">
         <div class="row">
-            <div class="card col-sm-12">
+            <div class="card first-card col-sm-12">
                 <div class="card-header">
                     Find a Shelter
                 </div>
@@ -206,58 +207,55 @@
 
                         <div class="col-sm-8"></div>
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 no-padding">
                             <form class="form-inline">
-                                <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Breed preference?" aria-label="Search">
-                                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                <input id="breed-input" class="form-control mr-sm-2" type="text" placeholder="Breed preference?" aria-label="Search">
                             </form>
                         </div>
 
                         <div class="col-sm-8"></div>
 
+                        <div class="col-sm-12">
+                            <hr id="separate-top" class="separate">
+                        </div>
+
                     </div>
+                <!--------------------start results -------------------->
+                    <section class="whole-thing">
+                        <div id="shelter-results" class="containter">  
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="row>">
+                                        <div class="col-sm-4">
+                                            <div class="append-pet-photo-here pet">
+                                                <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                                                <img class="photo">
+                                            </div>
+                                        </div>
+                                        <div class="dog-info col-sm-8">
+                                            <div class="d-hidden">
+                                               
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
 
             </div> 
         </div> 
 
-                <!--------------------start results -------------------->
-        <div id="shelter-results" class="containter">  
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row>">
-                        <div class="col-sm-4">
-                            <div class="append-pet-photo-here pet">
-                                    <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
-                                <img class="photo">
-                            </div>
-                        </div>
-                        <div class="dog-info col-sm-8">
-                            <div class="d-hidden">
-                                <div class="breed"></div>
-                                <div class="age"></div>
-                                <div class="gender"></div>
-                                <div class="fixed"></div>
-                                <div class="declawed"></div>
-                                <div class="shots"></div>
-                                <div class="description"></div>
-                                <div class="location"></div>
-                                <div class="contact"></div>
-                            </div>
-                        </div>   
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ____________________________________start card2_________________________________________________________ -->
+        <!----------------------------start card2-------------------------->
 
         <div class="row">
-            <div class="card col-sm-12">
+            <div class="card last-card col-sm-12">
                 <div class="card-header">
                     Learn About a Breed
                 </div>
             
-                <div class="card-body">
+                <div class="card-body last-card-body">
                     <div class="row">
                         <div class="col-sm-8 empty">Not sure what you're looking for? Maybe you just want any happy pup! Or maybe you saw a cutie you don't know much about? Check out some dog breeds you might be interested in here. Just type in a dog breed and hit search to learn more!  </div>
             
@@ -269,29 +267,34 @@
                         </div>
                     </div>            
                 </div>
-                <div id="dog-results" class="container">  
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="row>">
-                                <div class="col-sm-4">
-                                    <div class="append-dog-photo dog">
-                                            <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+
+                <div class="col-sm-12">
+                    <hr class="separate">
+                </div>
+            <!--------------------start results2 -------------------->
+                <section class="whole-thing2">
+                    <div id="dog-results" class="container">  
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row>">
+                                    <div class="col-sm-4">
+                                        <div class="append-dog-photo dog">
+                                        <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                                            <img class="photo">
+                                        </div>
                                     </div>
+                                    <div class="append-dog-info-div dog-info col-sm-8">
+                                        <div class="breedInfo">
+                                           
+                                        </div>
+                                    </div>   
                                 </div>
-                                <div class="append-dog-info-div dog-info col-sm-8">
-                                    <div class="breedInfo">
-        
-                                    </div>
-                                </div>   
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div> 
         </div> 
-
-        <!--------------------start results2 -------------------->
-
     </div>
         <!--Footer-->
         <footer class="footer" id="donate">
