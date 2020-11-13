@@ -30,6 +30,9 @@ function getToken(){
 // function to run when searching
 
   function search(){
+   
+    
+    
    var linkAdd = "";
     if($("#cityInput1").val() != ""){
       //general syntax for adding new parameters for search. will be triggered by select inputs
@@ -54,7 +57,7 @@ function getToken(){
         if ($("#inputGroupSelect05").val() !="") {
           linkAdd4 = "size=" + $("#inputGroupSelect05").val() 
           }
-            var linkAdd5="";
+            var linkAdd6="";
               if ($("#breed-input").val() !="") {
               linkAdd5 = "breed=" + $("#breed-input").val()
                  }
@@ -62,7 +65,7 @@ function getToken(){
   var token = JSON.parse(localStorage.getItem("token"));
     
       var token = JSON.parse(localStorage.getItem("token"));
-      var queryURL = "https://api.petfinder.com/v2/animals?limit=10&distance=10&" + linkAdd + "&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4 + "&" + linkAdd5;
+      var queryURL = "https://api.petfinder.com/v2/animals?limit=5&distance=10&" + linkAdd + "&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4 + "&" + linkAdd5 + "&" + linkAdd6;
       console.log(queryURL);
       $.ajax({
         header:origin,
@@ -71,6 +74,26 @@ function getToken(){
         headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
       }).then(function(response){ 
         console.log (response)
+        var imageArr = [];
+        for(let i = 0; i < response.animals.length; i++) {
+          var img = $("<img height='200px' src =" + response.animals[i].photos[0].medium + ">");
+          imageArr[i] = img;
+          console.log(imageArr);
+          // Append here
+         $(".whole-thing").append(img);
+        }
+
+          var urlArr =[];
+          for(let y=0; y< response.animals.length; y++) {
+            var link= response.animals[y].url;
+            urlArr= link
+            $(imageArr[y]).wrap($('<a>',{
+              href:  response.animals[y].url,
+           }));
+            // $(img).append(link);
+            console.log(link);
+          }
+        
        
         // $(".age").text(linkAdd2)
       });
