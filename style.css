@@ -5,28 +5,28 @@ body {
 
 .jumbotron {
     background-color: tan;
-    background-image: "./images/paws.jpg";
+    /* background-image: "./images/paws.jpg"; */
     padding: 50px;
     text-align: center;
 }
 
 
-.card1 {
-    width: 80%;
+/* .card1 {
     float: center;
     margin-left: 125px;
     margin-right: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: white;
-}
+} */
 
-.search-div {
+
+/* .search-div {
     padding: 0;
     position: absolute;
     top: 125px;
     left: 700px;
-}
+} */
 
 .card {
     padding: 0;
@@ -53,8 +53,7 @@ body {
 }
 
 #donate {
-    background-color:tan;
-    );
+    background-color: tan;
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -68,7 +67,7 @@ a {
     color: white;
 }
 
-.dog, 
+.dog,
 .pet {
     text-align: center;
     display: block;
@@ -79,4 +78,8 @@ a {
 .dog-info {
     text-align: center;
     font-style: normal;
+}
+
+#shelter-results {
+    display: none;
 }

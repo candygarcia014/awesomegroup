@@ -21,11 +21,9 @@
         </div>
     </div>
 
-
-
     <!--Carousel-->
-    <div class="container">
-        <!--Carousel indicators-->
+    <div class="container position-relative">
+        <!--Carousel indicators below the pictures-->
         <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -58,8 +56,8 @@
             </div>
         </div>
 
-   
-    <!--Carousel control icons/previous and next buttons-->
+
+        <!--Carousel control icons/previous and next buttons with in the image-->
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -68,47 +66,35 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    
+
     </div>
-    <!--card to insert the p 'Why should you rescue vs buy-->
-    <div class="card1">
-        <div class="row">
-            <div class="col-sm-12">
+    <!--card to insert the p 'Why rescue"-->
+    <div class="container">
+        <div class="row my-4">
+            <div class="card col-sm-12">
                 <div class="card-header">
                     Why Adopt a Dog or Cat Over Buying?
                 </div>
                 <div class="card-body">
 
-                    <p>Did you know that over 1,000 people per hour run a search right here looking to adopt a pet? Pet adoption is quickly becoming the preferred way to find a new dog, puppy, cat or kitten. Best of all, there are so many benefits when you adopt
-                        a dog or adopt a cat over buying. For instance, pet adoption will almost always be more affordable than buying a puppy for sale from a breeder or finding a kitten for sale from a litter. There are more benefits as well. Since pets in rescues
-                        and shelters usually come from a home where the owners ran out of money, got divorced, or had to move, it's common to find that the dogs and cats on our website are already housetrained, good with kids, or do well with other pets. People
-                        are finding out that buying a puppy for sale from a breeder isn't all it's cracked up to be, and the dogs and cats don't leave the organization without having their shots and being taken to the vet. That means less stress, and more savings!
-                        So what are you waiting for? Go find that perfect pet!
+                    <p>Did you know that over 1,000 people per hour run a search right here looking to adopt a pet? Pet adoption is quickly becoming the preferred way to find a new dog, puppy, cat or kitten. Best of all, there are so many benefits when you
+                        adopt a dog or adopt a cat over buying. For instance, pet adoption will almost always be more affordable than buying a puppy for sale from a breeder or finding a kitten for sale from a litter. There are more benefits as well. Since
+                        pets in rescues and shelters usually come from a home where the owners ran out of money, got divorced, or had to move, it's common to find that the dogs and cats on our website are already housetrained, good with kids, or do well
+                        with other pets. People are finding out that buying a puppy for sale from a breeder isn't all it's cracked up to be, and the dogs and cats don't leave the organization without having their shots and being taken to the vet. That
+                        means less stress, and more savings! So what are you waiting for? Go find that perfect pet!
                     </p>
                 </div>
             </div>
         </div>
-    </div>
-<!-- ____________________________________start card1_________________________________________________________ -->
-    <div class="container">
-        <div class="row">
+
+        <!-- ____________________________________start card1- Shelter Search-_________________________________________________________ -->
+
+        <div class="row my-4">
             <div class="card col-sm-12">
                 <div class="card-header">
-                    Find a Shelter
+                    Find A Pet In A Shelter Near You
                 </div>
 
-        <div class="row">
-            <div class="col-sm-8 empty"></div>
-
-            <div class="col-sm-4 search-div">
-                <form class="form-inline">
-                    <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Enter Zipcode" aria-label="Search">
-                    <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-            
-            
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-4">
@@ -217,93 +203,106 @@
                         <div class="col-sm-8"></div>
 
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-sm-8 empty"></div>
 
-            </div> 
-        </div> 
+                        <div class="col-sm-4 search-div">
+                            <form class="form-inline">
+                                <input id="cityInput1" class="form-control mr-sm-2" type="text" placeholder="Enter Zipcode" aria-label="Search">
+                                <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
 
-                <!--------------------start results -------------------->
-        <div id="shelter-results" class="containter">  
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row>">
-                        <div class="col-sm-4">
-                            <div class="append-pet-photo-here pet">
-                                    <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
-                                <img class="photo">
-                            </div>
                         </div>
-                        <div class="dog-info col-sm-8">
-                            <div class="d-hidden">
-                                <div class="breed"></div>
-                                <div class="age"></div>
-                                <div class="gender"></div>
-                                <div class="fixed"></div>
-                                <div class="declawed"></div>
-                                <div class="shots"></div>
-                                <div class="description"></div>
-                                <div class="location"></div>
-                                <div class="contact"></div>
-                            </div>
-                        </div>   
                     </div>
                 </div>
+
+            </div>
+        </div>
+
+        <!--------------------Start Shelter  results -------------------->
+
+        <div class="row my-4" id="shelter-results">
+            <div class=" card col-sm-12">
+                <div class="row>">
+                    <div class="col-sm-4">
+                        <div class="append-pet-photo-here pet">
+                            <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                            <img class="photo">
+                        </div>
+                    </div>
+                    <div class="dog-info col-sm-8">
+                        <div class="d-hidden">
+                            <div class="breed"></div>
+                            <div class="age"></div>
+                            <div class="gender"></div>
+                            <div class="fixed"></div>
+                            <div class="declawed"></div>
+                            <div class="shots"></div>
+                            <div class="description"></div>
+                            <div class="location"></div>
+                            <div class="contact"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- ____________________________________start card2_________________________________________________________ -->
 
-        <div class="row">
+        <div class="row my-4">
             <div class="card col-sm-12">
                 <div class="card-header">
                     Learn About a Breed
                 </div>
-            
+
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-8 empty">Not sure what you're looking for? Maybe you just want any happy pup! Or maybe you saw a cutie you don't know much about? Check out some dog breeds you might be interested in here. Just type in a dog breed and hit search to learn more!  </div>
-            
+                        <div class="col-sm-8 empty">
+                            Not sure what you're looking for? Maybe you just want any happy pup! Or maybe you saw a cutie you don't know much about? Check out some dog breeds you might be interested in here. Just type in a dog breed and hit search to learn more!
+                        </div>
+
                         <div class="col-sm-4 search-div2">
                             <form class="form-inline">
                                 <input id="breedSearch" class="form-control mr-sm-2" type="text" placeholder="Enter breed" aria-label="Search">
                                 <button id="searchBtn2" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </form>
                         </div>
-                    </div>            
+                    </div>
                 </div>
 
-            </div> 
-        </div> 
+            </div>
+        </div>
 
-        <!--------------------start results2 -------------------->
+        <!--------------------start results2 - Learn about a breed -------------------->
 
-        <div id="dog-results" class="containter">  
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row>">
-                        <div class="col-sm-4">
-                            <div class="append-dog-photo dog">
-                                    <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
-                                <img class="photo">
-                            </div>
+
+        <div class="row my-4" id="dog-results">
+            <div class="col-sm-12">
+                <div class="row>">
+                    <div class="col-sm-4">
+                        <div class="append-dog-photo dog">
+                            <!-- image cannot exceed w: 400px and height 220px before looking weird or going outside card -->
+                            <img class="photo">
                         </div>
-                        <div class="append-dog-info-div dog-info col-sm-8">
-                            <div class="breedInfo">
-
-                            </div>
-                        </div>   
                     </div>
+                    <div class="append-dog-info-div dog-info col-sm-8">
+                        <div class="breedInfo">
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-        <!--Footer-->
+    <!--Footer-->
     <footer class="footer" id="donate">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h6 class="lead">Donate to your local animal shelter or <a href="https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlebrand-T4&initialms=MP_PMK_Googlebrand-T4&pcode=WPSE9XXGOGN2PK00014&lpcode=WPSE9XXGOGN1PK00014&test&ds_rl=1066461&gclid=CjwKCAiAkan9BRAqEiwAP9X6UUMMa9MyQGgJc4ipye4MGz7G9kYxoH1ZINIOBxeRWXKlZP1hspV14BoC1VwQAvD_BwE&gclsrc=aw.ds">here</a> to the ASPCA!</h6>
-                </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h6 class="lead">Donate to your local animal shelter or <a href="https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlebrand-T4&initialms=MP_PMK_Googlebrand-T4&pcode=WPSE9XXGOGN2PK00014&lpcode=WPSE9XXGOGN1PK00014&test&ds_rl=1066461&gclid=CjwKCAiAkan9BRAqEiwAP9X6UUMMa9MyQGgJc4ipye4MGz7G9kYxoH1ZINIOBxeRWXKlZP1hspV14BoC1VwQAvD_BwE&gclsrc=aw.ds">here</a>                    to the ASPCA!</h6>
             </div>
-        </footer>
+        </div>
+    </footer>
     <!--JS link files -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
