@@ -10,7 +10,7 @@ function checkToken(){
 function getToken(){
   var queryURL = "https://api.petfinder.com/v2/oauth2/token";
   $.ajax({
-  header: origin,
+  // header: origin,
   url: queryURL,
   method: "POST",
   data:{"grant_type":"client_credentials",
@@ -42,25 +42,34 @@ function getToken(){
     var linkAdd2="";
     if ($("#inputGroupSelect03").val() !="") {
       linkAdd2 = "type=" + $("#inputGroupSelect03").val() 
-      } 
+      } else {
+        linkAdd2="";
+      }
        var linkAdd3="";
       if ($("#inputGroupSelect04").val() !="") {
         linkAdd3 = "gender=" + $("#inputGroupSelect04").val() 
+        } else {
+          linkAdd3="";
         }
+ var linkAdd4="";
+        if ($("#inputGroupSelect05").val() !="") {
+          linkAdd4 = "size=" + $("#inputGroupSelect05").val() 
+          } else {
+            linkAdd4 ="";
+          }
 
-
+        var linkAdd5 =""
       if ($("#breed-input").val() !="") {
         linkAdd5 = "type=" + $("#breed-input").val
       }
-
-          var linkAdd4="";
-        if ($("#inputGroupSelect05").val() !="") {
-          linkAdd4 = "size=" + $("#inputGroupSelect05").val() 
-          }
-            var linkAdd6="";
+      var linkAdd6="";
               if ($("#breed-input").val() !="") {
-              linkAdd5 = "breed=" + $("#breed-input").val()
+              linkAdd6 = "breed=" + $("#breed-input").val()
+                 } else {
+                   linkadd6 ="";
                  }
+         
+            
       
   var token = JSON.parse(localStorage.getItem("token"));
     
@@ -68,7 +77,6 @@ function getToken(){
       var queryURL = "https://api.petfinder.com/v2/animals?limit=5&distance=10&" + linkAdd + "&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4 + "&" + linkAdd5 + "&" + linkAdd6;
       console.log(queryURL);
       $.ajax({
-        header:origin,
         url: queryURL,
         method: "GET",
         headers:{"Content-Type": "application/json","Authorization":"Bearer " + token.value}
@@ -102,15 +110,18 @@ function getToken(){
   
      
         
-          
+function clear () {
+  $(".whole-thing").html("")
+}    
             
             
             
 checkToken();
 
 //runs when search button is pressed 
-$(".my-sm-0").on("click", function(event){
+$("#searchBtn1").on("click", function(event){
     event.preventDefault();
     checkToken();
     search();
+    clear();
 });
