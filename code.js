@@ -10,7 +10,7 @@ function breedSearch() {
     }).then(function(response) {
         console.log(response)
         for (var i = 0; i < response.length; i++) {
-            if (response[i].name.toLowerCase().substring(0, 4) == input.toLowerCase().substring(0, 4)) {
+            if (response[i].name.toLowerCase().substring(0, input.length) == input.toLowerCase()) {
                 var breed = $("<h1 class = 'breed'>").html("Breed: " + response[i].name);
                 var height = $("<div class = 'height'>").html("Height: " + response[i].height.imperial + "in");
                 var weight = $("<div class = 'weight'>").html("Weight: " + response[i].weight.imperial + "lbs");
@@ -48,7 +48,7 @@ function breedSearch() {
                     headers: { "x-api-key": "444115c6-6719-4989-974c-15985644036e" }
                 }).then(function(response) {
                     console.log(response)
-                    var img = $("<img height='300px' src =" + response[0].url + ">")
+                    var img = $("<img width='100%' class = 'img-fluid' src =" + response[0].url + ">")
                     $(".append-dog-photo").append(img)
                 });
                 return;
