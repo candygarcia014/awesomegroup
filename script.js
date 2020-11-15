@@ -116,5 +116,7 @@ $(".my-sm-0").on("click", function(event){
     event.preventDefault();
     checkToken();
     search();
+
     clear();
 });
+
