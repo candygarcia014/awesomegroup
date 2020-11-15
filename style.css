@@ -6,33 +6,13 @@ body {
 
 .jumbotron {
     background-color: tan;
-    /* background-image: "./images/paws.jpg"; */
     padding: 50px;
     text-align: center;
 }
  #breedSearch{
-width: 70%;
-margin-right:10px;
-} 
-
-
-/* .card1 {
-    float: center;
-    margin-left: 125px;
-    margin-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: white;
-} */
-
-
-/* .search-div {
-    z-index: 1;
-    padding: 0;
-    position: absolute;
-    top: 125px;
-    left: 700px;
-} */
+    width: 70%;
+    margin-right:10px;
+}   
 
 .card {
     padding: 0;
@@ -62,8 +42,7 @@ margin-right:10px;
     width: 100%;
 }
 
-.custom-select,
-#cityInput1 {
+.custom-select {
     margin: 10px;
 }
 
@@ -73,18 +52,12 @@ margin-right:10px;
 }
 
 #breed-input {
-    margin-top: 10px;
+    margin: 10px 10px 10px;
 }
 
-.no-padding {
-    padding: 0 25px;
+#cityInput1 {
+    margin-left: 10px;
 }
-
-/* .dog-info {
-    position: absolute;
-    top: 20px;
-    left: 500px;
-}  */
 
 #donate {
     background-color: tan;
@@ -116,3 +89,34 @@ a {
 #shelter-results {
     display: none;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+
+    #cityInput1 {
+        margin-bottom: 10px;
+    }
+
+        #searchBtn1 {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+
+    #cityInput1 {
+        margin-bottom: 10px;
+    }
+
+    #breedSearch {
+        margin-bottom: 10px;
+    }
+
+    #searchBtn1 {
+        margin-left: 10px;
+    }
+}
+
