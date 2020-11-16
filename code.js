@@ -1,3 +1,18 @@
+var queryURL = "https://api.thedogapi.com/v1/breeds"
+    console.log(queryURL);
+    $.ajax({
+        header: origin,
+        url: queryURL,
+        method: "GET",
+        headers: { "x-api-key": "444115c6-6719-4989-974c-15985644036e" }
+    }).then(function(response) {
+        for(var i = 0; i < response.length; i++){
+            var option = $("<option>")
+            option.html(response[i].name)
+            $("#mylist").append(option)
+        }
+    })
+
 function breedSearch() {
     var input = $("#breedSearch").val()
     var queryURL = "https://api.thedogapi.com/v1/breeds"
