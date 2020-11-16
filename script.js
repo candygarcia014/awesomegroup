@@ -48,7 +48,7 @@ function getToken(){
         linkAdd3 = "gender=" + $("#inputGroupSelect04").val() 
         }
 
-
+        linkAdd5="";
       if ($("#breed-input").val() !="") {
         linkAdd5 = "type=" + $("#breed-input").val
       }
@@ -65,7 +65,7 @@ function getToken(){
   var token = JSON.parse(localStorage.getItem("token"));
     
       var token = JSON.parse(localStorage.getItem("token"));
-      var queryURL = "https://api.petfinder.com/v2/animals?limit=5&distance=10&" + linkAdd + "&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4 + "&" + linkAdd5 + "&" + linkAdd6;
+      var queryURL = "https://api.petfinder.com/v2/animals?limit=5&distance=100&" + linkAdd + "&" + linkAdd2 + "&" + linkAdd3 + "&" + linkAdd4 + "&" + linkAdd5 + "&" + linkAdd6;
       console.log(queryURL);
       $.ajax({
         header:origin,
